@@ -1,0 +1,153 @@
+{
+  "info": {
+    "_postman_id": "bf755dac-0f27-45ba-b14e-15c15fc4a349",
+    "name": "Vema",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49277637",
+    "_collection_link": "https://navigation-architect-11278799-2771276.postman.co/workspace/6e4a0cff-83a4-435e-876b-704642567abc/collection/49277637-bf755dac-0f27-45ba-b14e-15c15fc4a349?action=share&source=collection_link&creator=49277637"
+  },
+  "item": [
+    {
+      "name": "Vehiculos",
+      "item": [
+        {
+          "name": "Crear vehículo",
+          "id": "2f70cdf9-038e-4796-bd86-5b783441a077",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apiKey}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"internal_code\": \"UNIDAD-003\",\n  \"license_plate\": \"GTS-123-B\",\n  \"vin\": \"00HGCM82633A004352\",\n  \"year\": 2020,\n  \"vehicle_type_id\": \"bb3955c5-40f5-4c51-bda4-2af5edfb8db3\",\n  \"brand\": \"Mercedes-Benz\",\n  \"model\": \"Sprinter\",\n  \"status\": \"active\",\n  \"is_pool_unit\": false,\n  \"gps_provider\": \"GPS Demo Provider\",\n  \"has_camera\": true,\n  \"current_odometer_km\": 85200.5,\n  \"last_service_odometer_km\": 80000,\n  \"base_location_id\": \"6010a757-6dff-44c7-a241-de4a0027e693\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/vehicle",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "vehicle"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "6ef2da0d-3a5d-41d6-8d18-7545839dc918"
+    },
+    {
+      "name": "Operadores",
+      "item": [],
+      "id": "d479e35e-0e52-4c78-a34b-0fc733c3568e"
+    },
+    {
+      "name": "Contratos",
+      "item": [],
+      "id": "8a4d0279-db33-42e5-a64f-32936c57e1a8"
+    },
+    {
+      "name": "Viajes",
+      "item": [],
+      "id": "189971ac-006e-45eb-be98-3f0b2468825f"
+    },
+    {
+      "name": "Incidentes",
+      "item": [],
+      "id": "244326bc-52eb-47ae-aed3-d5ef0de25659"
+    },
+    {
+      "name": "Mantenimiento",
+      "item": [],
+      "id": "1d214f40-2055-4d3a-911e-b32fdef4b8cb"
+    },
+    {
+      "name": "Catalogos",
+      "item": [
+        {
+          "name": "Tipos de Vehiculos",
+          "item": [
+            {
+              "name": "Ver tipos de vehiculos",
+              "id": "ec4b6a24-a080-4576-9de4-bf0da0f6d659",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "apikey",
+                    "value": "{{apiKey}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/vehicle_type?is_active=eq.true",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "vehicle_type"
+                  ],
+                  "query": [
+                    {
+                      "key": "is_active",
+                      "value": "eq.true"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
+          "id": "e24a6a75-76d4-4d55-8117-81886ba6e5a9"
+        },
+        {
+          "name": "Locaciones",
+          "item": [],
+          "id": "0e857050-0c41-4956-8166-9adf7a6efad3"
+        },
+        {
+          "name": "Clientes de la compañía",
+          "item": [],
+          "id": "ee8df285-b59e-4071-b530-184a55c924fb"
+        }
+      ],
+      "id": "7fd33244-956e-4345-b820-46149d37d0b4"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "e2c01358-0cc7-4848-8ec1-a69aecb25cc8",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "a0ec20ef-5512-444e-8564-b4b10679ffe4",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
